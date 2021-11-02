@@ -1,2 +1,2 @@
-# goit-markup-hw-06
-HW6GOTI forms
+# -goit-markup-hw-02.
+GoIt-HomeWork2-HTML+CSS
