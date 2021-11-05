@@ -390,7 +390,7 @@
          <label class="discription-text-label discription-position">
           Имя
          <span class="form-box-svg">
-          <input class="discription-input" type="text" name="user-name" pattern="[A-Za-zА-Яа-я ]{100}+" title="Петро Петренко">
+          <input class="discription-input" autofocus type="text" name="user-name" pattern="[A-Za-zА-Яа-я ]{100}+" title="Петро Петренко">
           <svg class="form-icon" width="18px" height="18px">
             <use href="./images/icons.svg#icon-person-black"></use>
            </svg>
@@ -418,12 +418,12 @@
           Комментарий
           <textarea class="comment" name="user-comment" placeholder="Введите текст"></textarea>
         </label>
-
-        <input class="visually-hidden" type="checkbox" id="group-checkbox">
+         <span class="form-checkbox"> 
+        <input class="icon-checkbox visually-hidden" type="checkbox" id="group-checkbox">
         <label class="discription-content-label" for="group-checkbox">Соглашаюсь с рассылкой и принимаю
-          <a href="#">Условия договора</a></label>
-        <button class="btn-form" type="submit">Отправить</button>
-        
+          <a class="link-form" href="#">Условия договора</a></label>
+        </span>
+          <button class="btn-form" type="submit">Отправить</button>
         </form>
       </div>
       </div>

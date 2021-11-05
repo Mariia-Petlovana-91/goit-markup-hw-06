@@ -1,7 +1,7 @@
 :root {
   --hover-focus-color-others: #2196f3;
-  --hover-focus-color-button: #188ce8;
-  --logo-color: #2196f3;
+  --hover-focus-color-importmant-button: #188ce8;
+  --akcent-color: #2196f3;
   --title-color-hero: #ffffff;
   --title-color-second: #212121;
   --title-color-third: #212121;
@@ -40,6 +40,9 @@ img {
 address {
   font-style: inherit;
 }
+a {
+  text-decoration: none;
+}
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -73,7 +76,6 @@ address {
 
 .visually-hidden {
   position: absolute;
-  white-space: nowrap;
   width: 1px;
   height: 1px;
   overflow: hidden;
@@ -91,7 +93,7 @@ address {
   font-size: 26px;
   line-height: 1.19em;
   letter-spacing: 0.03em;
-  color: var(--logo-color);
+  color: var(--akcent-color);
 }
 .logo-word-dark {
   color: var(--logo-word-dark);
@@ -106,7 +108,7 @@ address {
   padding-top: 24px;
   padding-bottom: 24px;
   align-items: center;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--border-color);
 }
 .lists-header {
   display: flex;
@@ -147,7 +149,7 @@ address {
   content: "";
   width: 100%;
   height: 4px;
-  background-color: #2196f3;
+  background-color: var(--akcent-color);
   display: block;
   position: absolute;
   bottom: -32px;
@@ -236,7 +238,7 @@ address {
 }
 .btn-hero:hover,
 .btn-hero:focus {
-  background-color: #188ce8;
+  background-color: var(--hover-focus-color-importmant-button);
 }
 
 /*---------------------------main page section 2 features----------------------*/
@@ -301,7 +303,7 @@ address {
   line-height: 1.14em;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--color-text);
   width: 100%;
   min-height: 70px;
   background-color: #2f303a80;
@@ -470,7 +472,7 @@ address {
 }
 
 .title-vault {
-  color: #ffffff;
+  color: var(--color-text);
 }
 .vault-list-icons {
   display: flex;
@@ -580,6 +582,9 @@ address {
   letter-spacing: 0.01em;
   color: #757575;
 }
+.discription-text-label:not(:last-child) {
+  margin-bottom: 10px;
+}
 .discription-input,
 .comment {
   width: 100%;
@@ -587,6 +592,12 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px;
+}
+.discription-input:hover + .form-icon,
+.discription-input:focus + .form-icon {
+  outline: var(--akcent-color);
+  border-color: var(--akcent-color);
+  fill: var(--akcent-color);
 }
 .form-box-svg {
   display: block;
@@ -599,10 +610,71 @@ address {
   transform: translateY(-50%);
 }
 .comment {
-  margin-bottom: 20px;
   padding-left: 16px;
   resize: none;
   min-height: 120px;
+}
+.comment::placeholder {
+  font-size: 14px;
+  line-height: 1.14em;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+.discription-content-label {
+  font-size: 14px;
+  line-height: 1.71em;
+  letter-spacing: 0.03em;
+  color: #757575;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discription-content-label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border: 1px solid #212121;
+  margin-right: 9px;
+}
+.link-form {
+  color: var(--akcent-color);
+  position: relative;
+}
+.link-form::after {
+  content: "";
+  display: block;
+  align-self: center;
+  width: 100%;
+  height: 1px;
+  background-color: var(--akcent-color);
+  position: absolute;
+  right: 0px;
+  top: 19px;
+}
+.icon-checkbox {
+  left: 20px;
+}
+.btn-form {
+  align-self: center;
+  min-width: 200px;
+  min-height: 50px;
+  background-color: var(--akcent-color);
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.88em;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  border-color: var(--akcent-color);
 }
 /*-----------------------------portfolio section 1 button----------------------------*/
 .btn-list {
@@ -676,7 +748,7 @@ address {
   font-size: 18px;
   line-height: 1.56em;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--color-text);
   padding: 63px 24px;
   position: absolute;
   width: 100%;
