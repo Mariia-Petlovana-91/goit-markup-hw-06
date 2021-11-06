@@ -13,7 +13,7 @@
   --color-text: #ffffff;
   --border-color: #ececec;
   --background-color: #f5f4fa;
-  --transition-duration: 250ms;
+  --transition-duration: 2550ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
@@ -81,7 +81,7 @@ a {
   overflow: hidden;
   border: 0;
   padding: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
 }
@@ -434,7 +434,6 @@ a {
 .vault-section {
   display: flex;
   align-items: baseline;
-  margin: 0 auto;
 }
 .logo-footer {
   display: block;
@@ -471,9 +470,7 @@ a {
 .vault-item > a:focus {
   color: var(--hover-focus-color-others);
 }
-.vault-link {
-  margin-right: 93px;
-}
+
 .title-vault {
   color: var(--color-text);
 }
@@ -506,14 +503,9 @@ a {
   fill: #ffffff;
   padding: 12px;
 }
-
-.position-btn-input {
-  display: flex;
-}
 .vault-input {
   min-width: 358px;
   min-height: 50px;
-  margin-right: 12px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -534,6 +526,12 @@ a {
 .vault-input:focus {
   border-color: var(--akcent-color);
 }
+.vault-form-icon {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  transform: tr;
+}
 .vault-form-btn {
   min-width: 200px;
   min-height: 50px;
@@ -547,13 +545,15 @@ a {
   padding: 10px 29px;
   transition: background-color var(--transition-duration)
     var(--transition-timing-function);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .vault-form-btn:hover,
 .vault-form-btn:focus {
   background-color: var(--hover-focus-color-importmant-button);
+}
+.vault-form-elements-position {
+  position: relative;
+  min-width: 200px;
+  min-height: 50px;
 }
 /* ---------modal window----------------- */
 .backdrop {
@@ -726,7 +726,8 @@ a {
   border: 1px solid var(--hover-focus-color-others);
   border-radius: 2px;
   box-shadow: 0px 1px 3px var(--hover-focus-color-others),
-    0px 1px 1px var(--hover-focus-color-importmant-button);
+    0px 1px 1px var(--hover-focus-color-importmant-button),
+    0px 2px 1px var(--hover-focus-color-importmant-button);
 }
 .input-checkbox:checked:focus + .chekc-box {
   border: none;
@@ -813,7 +814,7 @@ a {
 .item-project {
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: calc(100% / 3 - 30px);
+  flex-basis: calc(100% / 3 -30px);
   text-transform: capitalize;
   transition: transform var(--transition-duration)
     var(--transition-timing-function);
