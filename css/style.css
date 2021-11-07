@@ -434,14 +434,11 @@ a {
 .vault-section {
   display: flex;
   align-items: baseline;
-  margin: 0 auto;
+  justify-content: space-between;
 }
 .logo-footer {
   display: block;
   margin-bottom: 20px;
-}
-.vault-lisi {
-  margin-right: 70px;
 }
 .vault-item {
   font-size: 14px;
@@ -470,9 +467,6 @@ a {
 .vault-item > a:hover,
 .vault-item > a:focus {
   color: var(--hover-focus-color-others);
-}
-.vault-link {
-  margin-right: 93px;
 }
 .title-vault {
   color: var(--color-text);
@@ -511,6 +505,7 @@ a {
   display: flex;
 }
 .vault-input {
+  cursor: pointer;
   min-width: 358px;
   min-height: 50px;
   margin-right: 12px;
@@ -540,11 +535,12 @@ a {
   background-color: var(--akcent-color);
   border-color: var(--akcent-color);
   border-radius: 4px;
+  border: 0px;
   font-size: 16px;
   line-height: 1.88em;
   letter-spacing: 0.06em;
   color: var(--color-text);
-  padding: 10px 29px;
+  padding: 0px;
   transition: background-color var(--transition-duration)
     var(--transition-timing-function);
   display: flex;
@@ -602,16 +598,16 @@ a {
   position: absolute;
   top: 12px;
   right: 8px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
   transition: border-color var(--transition-duration)
       var(--transition-timing-function),
-    fill var(--transition-duration) var(--transition-timing-function);
+    fill var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 .modalwindow-btn-close:hover,
 .modalwindow-btn-close:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   outline: none;
-  border-color: var(--akcent-color);
   fill: var(--hover-focus-color-others);
 }
 /* ----------------form--------------------- */
@@ -645,11 +641,12 @@ a {
 }
 .discription-input,
 .comment {
+  cursor: pointer;
   width: 100%;
   min-height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 12px;
+  padding: 12px 12px 12px 30px;
   transition: border-color var(--transition-duration)
     var(--transition-timing-function);
 }
@@ -682,6 +679,7 @@ a {
   transform: translateY(-50%);
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
+
 .label-checkebox {
   font-size: 14px;
   line-height: 1.71em;
@@ -691,54 +689,45 @@ a {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-}
-.input-checkbox {
-  transition: background-image var(--transition-duration)
-    var(--transition-timing-function);
-}
-.chekc-box {
-  width: 16px;
-  height: 15px;
-  display: block;
-  margin-right: 7px;
-  background-image: url(/images/icon-check-off.svg);
   position: relative;
-  transition: border var(--transition-duration)
+}
+
+.icon-checekebox {
+  display: block;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 12px;
+  fill: transparent;
+  transition: background-color var(--transition-duration)
       var(--transition-timing-function),
     box-shadow var(--transition-duration) var(--transition-timing-function);
 }
-.chekc-box::before {
-  display: block;
-  content: "";
-  width: 16px;
-  height: 15px;
-  background-image: url(/images/icon-check-on.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  transform: scale(0);
-  transition: background-image var(--transition-duration)
-    var(--transition-timing-function);
+
+.input-checkebox:hover + .icon-checekebox,
+.input-checkebox:focus + .icon-checekebox {
+  box-shadow: 0px 1px 2px var(--akcent-color), 0px 2px 7px var(--akcent-color);
 }
-.input-checkbox:focus + .chekc-box,
-.input-checkbox:hover + .chekc-box {
-  background-image: none;
-  border: 1px solid var(--hover-focus-color-others);
-  border-radius: 2px;
-  box-shadow: 0px 1px 3px var(--hover-focus-color-others),
-    0px 1px 1px var(--hover-focus-color-importmant-button);
-}
-.input-checkbox:checked:focus + .chekc-box {
+.input-checkebox:checked + .icon-checekebox {
   border: none;
-}
-.input-checkbox:checked + .chekc-box::before {
-  transform: scale(1);
+  background-color: var(--akcent-color);
+  fill: #ffffff;
 }
 .link-checkebox {
+  cursor: pointer;
   color: var(--akcent-color);
   display: block;
   margin-left: 5px;
   position: relative;
+  outline-style: transparent;
+}
+.link-checkebox:hover,
+.link-checkebox:focus {
+  outline-color: var(--hover-focus-color-importmant-button);
 }
 .link-checkebox::after {
   content: "";
@@ -755,6 +744,8 @@ a {
   min-height: 50px;
   background-color: var(--akcent-color);
   border-radius: 4px;
+  border: 0;
+  outline-color: transparent;
   font-size: 16px;
   line-height: 1.88em;
   text-align: center;
@@ -766,6 +757,7 @@ a {
 }
 .btn-form:hover,
 .btn-form:hover {
+  outline-color: var(--hover-focus-color-importmant-button);
   background-color: var(--hover-focus-color-importmant-button);
 }
 /*-----------------------------portfolio section 1 button----------------------------*/
