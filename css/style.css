@@ -722,7 +722,6 @@ a {
   display: block;
   margin-left: 5px;
   position: relative;
-  outline-style: transparent;
 }
 .link-checkebox:hover,
 .link-checkebox:focus {
